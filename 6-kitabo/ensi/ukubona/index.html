@@ -146,22 +146,22 @@
       <img src="assets/images/ukubona.png" alt="Ukubona Logo" />
     </a>
   </div>
-<script>
-  const toggle = document.getElementById('gridToggle');
-  const menu = document.getElementById('gridMenu');
-
-  toggle.addEventListener('click', () => {
-    const isOpen = menu.style.display === 'grid';
-    menu.style.display = isOpen ? 'none' : 'grid';
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
-      menu.style.display = 'none';
-    }
-  });
-
-  const raw = `
+  <script>
+    const toggle = document.getElementById('gridToggle');
+    const menu = document.getElementById('gridMenu');
+  
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.style.display === 'grid';
+      menu.style.display = isOpen ? 'none' : 'grid';
+    });
+  
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.style.display = 'none';
+      }
+    });
+  
+    const raw = `
 1. [nineth](https://abikesa.github.io/nineth/)
 2. [manson](https://abikesa.github.io/will/)
 3. [peterson](https://abikesa.github.io/jordanpeterson)
@@ -828,51 +828,51 @@
 664. [and-why-r](https://abikesa.github.io/and-why-r/)
 665. [how-about-stata](https://abikesa.github.io/how-about-stata/)
 666. [zarathustra](https://abikesa.github.io/zarathustra/)
-  `;
-
-  const animationPool = [
-    "https://assets1.lottiefiles.com/packages/lf20_x62chJ.json",
-    "https://assets9.lottiefiles.com/packages/lf20_kklehxsp.json",
-    "https://assets4.lottiefiles.com/packages/lf20_q5pk6p1k.json",
-    "https://assets2.lottiefiles.com/packages/lf20_u4yrau.json",
-    "https://assets5.lottiefiles.com/private_files/lf30_editor_ski34jwz.json",
-    "https://assets7.lottiefiles.com/packages/lf20_y6n67rkf.json",
-    "https://assets10.lottiefiles.com/packages/lf20_iwmd6pyr.json"
-  ];
-
-  const keywordsToAnimate = ['donor', 'case', 'trial', 'ai', 'flow', 'graph', 'anarchist'];
-
-  const emojis = ['🌍','🎵','📚','🎨','🔬','💡','🧠','🧮','📊','🧬','⚖️','📈','📜','🏺','📷','📖','🛠️','🧰','🎼','🏥','🗺️','🧘','✊','🎬','📺','🛸','🧪','🕊️','🚀','🌱','🪐','🧭','🔭','🔐','🧳','🖼️','📼','⛵','🦠','⚙️','🖋️','💾','🔢','📁','🎙️','🧸','🔍','🎯','🦉','🧿','🔮','🥁','🎻','🏛️','🧱','🩺','🧹','🪄','📂','📇','📃','📜','💽','🎓'];
-
-  const grid = document.getElementById('gridMenu');
-  const links = [...raw.matchAll(/\[(.*?)\]\((.*?)\)/g)];
-
-  links.forEach(([_, name, url], i) => {
-    const a = document.createElement('a');
-    a.href = url;
-    a.target = '_blank';
-    a.style.animationDelay = `${i * 0.015}s`;
-
-    const shouldAnimate = keywordsToAnimate.some(keyword => name.toLowerCase().includes(keyword)) || Math.random() < 0.2;
-
-    if (shouldAnimate) {
-      const anim = document.createElement('lottie-player');
-      anim.setAttribute('src', animationPool[i % animationPool.length]);
-      anim.setAttribute('autoplay', '');
-      anim.setAttribute('loop', '');
-      anim.setAttribute('mode', 'normal');
-      a.appendChild(anim);
-    } else {
-      const emoji = emojis[i % emojis.length];
-      const icon = document.createElement('div');
-      icon.textContent = emoji;
-      icon.className = 'icon-box';
-      a.appendChild(icon);
-    }
-
-    a.appendChild(document.createTextNode(name));
-    grid.appendChild(a);
-  });
-</script>
+    `;
+  
+    const animationPool = [
+      "https://assets1.lottiefiles.com/packages/lf20_x62chJ.json",
+      "https://assets9.lottiefiles.com/packages/lf20_kklehxsp.json",
+      "https://assets4.lottiefiles.com/packages/lf20_q5pk6p1k.json",
+      "https://assets2.lottiefiles.com/packages/lf20_u4yrau.json",
+      "https://assets5.lottiefiles.com/private_files/lf30_editor_ski34jwz.json",
+      "https://assets7.lottiefiles.com/packages/lf20_y6n67rkf.json",
+      "https://assets10.lottiefiles.com/packages/lf20_iwmd6pyr.json"
+    ];
+  
+    const keywordsToAnimate = ['donor', 'case', 'trial', 'ai', 'flow', 'graph', 'anarchist'];
+  
+    const emojis = ['🌍','🎵','📚','🎨','🔬','💡','🧠','🧮','📊','🧬','⚖️','📈','📜','🏺','📷','📖','🛠️','🧰','🎼','🏥','🗺️','🧘','✊','🎬','📺','🛸','🧪','🕊️','🚀','🌱','🪐','🧭','🔭','🔐','🧳','🖼️','📼','⛵','🦠','⚙️','🖋️','💾','🔢','📁','🎙️','🧸','🔍','🎯','🦉','🧿','🔮','🥁','🎻','🏛️','🧱','🩺','🧹','🪄','📂','📇','📃','📜','💽','🎓'];
+  
+    const grid = document.getElementById('gridMenu');
+    const links = [...raw.matchAll(/\[(.*?)\]\((.*?)\)/g)];
+  
+    links.forEach(([_, name, url], i) => {
+      const a = document.createElement('a');
+      a.href = url;
+      a.target = '_blank';
+      a.style.animationDelay = `${i * 0.015}s`;
+  
+      const shouldAnimate = keywordsToAnimate.some(keyword => name.toLowerCase().includes(keyword)) || Math.random() < 0.2;
+  
+      if (shouldAnimate) {
+        const anim = document.createElement('lottie-player');
+        anim.setAttribute('src', animationPool[i % animationPool.length]);
+        anim.setAttribute('autoplay', '');
+        anim.setAttribute('loop', '');
+        anim.setAttribute('mode', 'normal');
+        a.appendChild(anim);
+      } else {
+        const emoji = emojis[i % emojis.length];
+        const icon = document.createElement('div');
+        icon.textContent = emoji;
+        icon.className = 'icon-box';
+        a.appendChild(icon);
+      }
+  
+      a.appendChild(document.createTextNode(name));
+      grid.appendChild(a);
+    });
+  </script>
 </body>
 </html>
