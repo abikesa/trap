@@ -17,7 +17,7 @@ Please note: **Core documentation is not here.** It resides in **deeply nested, 
 | L1    | Metadata Refraction & Signposting  | `README.cff`, `.well`    | 🧭 Partial   |
 | L2    | Functional Illusions                | `index.html`, `favicon`  | ✨ Active     |
 | L3    | Symbolic Payload                    | `ukubona.png`, `🏝️.md`    | 🪡 Hidden     |
-| L4    | Recursive Entrypoints               | `6-kitabo/ensi/ukubona/` | 🔑 Intentional|
+| L4    | Recursive Entrypoints               | `ukubona/` | 🔑 Intentional|
 
 ---
 
@@ -73,7 +73,7 @@ $$
 - [Launch Dashboard](https://example.com/404)  
 - [Token Dispenser](./token.cff)  
 - [Index (Decoy)](./index.html)  
-- [Start Reading](./6-kitabo/ensi/ukubona/index.html) 🧭  
+- [Start Reading](./index.html) 🧭  
 - [Entropy Poem](./poem.md) ✍️
 
 ---
@@ -168,8 +168,8 @@ A more mythic, symbolic tone, woven into a paragraph about epistemic misdirectio
 *A poetic decoy wrapped in layered epistemology.*  
 
 <p align="center">
-  <a href="6-kitabo/ensi/figures/poem.png">
-    <img src="6-kitabo/ensi/figures/poem.png" width="300" />
+  <a href="poem.png">
+    <img src="poem.png" width="300" />
   </a><br>
   <em>Click to expand the verse</em>
 </p>
